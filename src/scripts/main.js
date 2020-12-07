@@ -9,42 +9,49 @@ import { createSunflower } from './seeds/sunflower.js'
 import { createWheat } from './seeds/wheat.js'
 import { addPlant } from './field.js'
 import { usePlants } from './field.js'
+import { plantSeeds } from './tractor.js'
 
 
-// // Plan
-// createPlan()
+// Plan
+createPlan();
 
-// const yearlyPlan = createPlan()
-// console.log(createPlan);
+const yearlyPlan = createPlan();
+console.log(yearlyPlan);
 
-// // Corn
-// const cornSeed = createCorn()
-// console.log(cornSeed);
+// Seeds
+// Corn
+const cornSeed = createCorn();
+console.log(cornSeed);
 
-// // Asparagus
-// const asparagusSeed = createAsparagus()
-// console.log(asparagusSeed);
+// Asparagus
+const asparagusSeed = createAsparagus();
+console.log(asparagusSeed);
 
-// // Potato
-// const potatoSeed = createPotato()
-// console.log(potatoSeed);
+// Potato
+const potatoSeed = createPotato();
+console.log(potatoSeed);
 
-// // Soybean
-// const soybeanSeed = createSoybean()
-// console.log(soybeanSeed);
+// Soybean
+const soybeanSeed = createSoybean();
+console.log(soybeanSeed);
 
-// // Sunflower
-// const sunflowerSeed = createSunflower()
-// console.log(sunflowerSeed);
+// Sunflower
+const sunflowerSeed = createSunflower();
+console.log(sunflowerSeed);
 
-// // Wheat
-// const wheatSeed = createWheat()
-// console.log(wheatSeed);
+// Wheat
+const wheatSeed = createWheat();
+console.log(wheatSeed);
 
 // field.js test
 let seed = {};
-seed = createSunflower();
-const addSunflower = addPlant(seed);
-const useSunflower = usePlants();
-console.log(addSunflower, useSunflower);
+addPlant(seed);
+const storeValue = usePlants();
+console.log(`Array of plants`,storeValue)
 
+
+// tractor.js test
+let plan = createPlan();
+plantSeeds(plan);
+let usedPlants = usePlants();
+console.log(`Use Plants`, usedPlants)
